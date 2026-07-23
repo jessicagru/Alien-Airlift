@@ -1,0 +1,127 @@
+<!-- Code written with the helo of https://www.w3schools.com/graphics/game_intro.asp and https://www.w3schools.com/graphics/game_canvas.asp -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Alien Airlift</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body class="space-bg">
+<main id="game">
+<section id="home-screen" class="screen active">
+  <div class="home-wrapper">
+    <div class="home-title-card">
+      <p class="home-subtitle">The Ultimate Space Rescue</p>
+      <h1 class="home-title">
+        <span class="home-title-main">ALIEN AIRLIFT</span>
+        <span class="home-title-sub">Bring them Home!</span>
+      </h1>
+    </div>
+
+    <div class="home-buttons">
+      <button id="play-button" class="btn-circle"> ▶</button>
+
+      <button id="instructions-button" class="btn-pill"> INSTRUCTIONS </button>
+    </div>
+</section>
+
+<section id="instructions-screen" class="screen">
+    <button id="back-button" class="back-button" aria-label="Return to Home">
+        ←
+    </button>
+    <div class="screen-center">
+        <div class="panel">
+            <p class="small-title">
+                Mission Briefing
+            </p>
+            <h1 class="panel-title">
+                How To Play
+                <span>Alien Airlift</span>
+            </h1>
+            <div class="instructions-block">
+                <h2>🚀 Controls</h2>
+                <p>
+                    ⬆️ ⬇️ ⬅️ ➡️
+                    <br>
+                    Use the arrow keys or WASD to move your spacecraft.
+                </p>
+                <p>
+                    SPACEBAR
+                    <br>
+                    Fire your spacecraft lasers.
+                </p>
+            </div>
+            <div class="instructions-block">
+                <h2>🌎 Mission</h2>
+                <p>
+                    Rescue stranded aliens across the galaxy while avoiding dangerous obstacles.
+                </p>
+                <p>
+                    Destroy obstacles before they reach your spacecraft.
+                </p>
+            </div>
+            <div class="instructions-block">
+                <h2>⭐ Scoring</h2>
+                <p>
+                    Destroy obstacles to collect stars and increase your score.
+                </p>
+                <p>
+                    Lose all hearts and the mission will fail.
+                </p>
+            </div>
+        </div>
+</section>
+
+
+<section id="game-screen" class="screen">
+    <div class="score-box">
+        <span class="score-star"> ★ </span>
+        <span id="score-value"> 00000 </span>
+    </div>
+    <div class="health-box">
+    <span id="health"> ❤️ ❤️ ❤️ </span>
+      <!-- working on real hearts <span class="heart"></span>
+        <span class="heart"></span>
+        <span class="heart"></span> -->
+    </div>
+
+
+    <div id="play-area">
+        <div id="ship">
+            <div class="ship-window"></div>
+        </div>
+    </div>
+</section>
+
+
+
+<section id="game-over-screen" class="overlay hidden">
+    <div class="overlay-panel">
+        <h2 id="game-result-title">
+            Mission Failed
+        </h2>
+        <p id="game-result-message">
+            Your spacecraft was destroyed.
+        </p>
+        <p>
+            Final Score:
+            <strong id="final-score">
+                00000
+            </strong>
+        </p>
+        <div class="game-over-buttons">
+            <button id="next-level-button" class="btn-pill hidden">
+                Continue Mission
+            </button>
+            <button id="restart-level-button" class="btn-pill">
+                Restart Level
+            </button>
+            <button id="return-home-button" class="btn-pill">
+                Return Home
+            </button>
+    </div>
+</section>
+</main>
+<script src="script.js"></script>
+</body>
+</html>
